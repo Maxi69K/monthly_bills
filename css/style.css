@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/**********************************************
+                Global styles
+**********************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color-light: #ddd;
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --color-light: #999;
+  --color-blue: #04a1bf;
+}
+
+html {
+  transition: all .5s ease-in;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
+}
+
+body {
+  font-family: 'Bebas Neue', cursive;
+  height: 100vh;
+}
+
+/**********************************************
+                Specific styles
+**********************************************/
+.container {
+  position: relative;
+  top: 30vh;
+  max-width: 300px;
+  margin: auto;
+}
+
+#year {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 40%;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+
+}
+
+#title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 50px;
+}
+
+#title .month {
+  position: absolute;
+  top: -20px;
+  right: 50px;
+  cursor: pointer;
+}
+
+#title .fa-minus {
+  top: 40px;
+}
+
+#title h1,
+#title span {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#title span {
+  position: relative;
+  margin-left: 5px;
+}
+
+#userInput {
+  width: 169px;
+  height: 25px;
+  border: none;
+  border-bottom: 1px solid var(--color-light);
+  text-align: center;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+#userInput:focus {
+  outline: none;
+}
+
+#userInput::placeholder {
+  color: var(--color-light);
+}
+
+#enter {
+  cursor: pointer;
+  border: none;
+  margin-left: 10px;
+  padding: 5px 15px;
+  border-radius: 3px;
+  color: var(--color-blue);
+  transition: all .5s ease;
+}
+
+#enter:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+#enter:active {
+  transform: scale(.95);
+}
+
+.listItems {
+  margin-top: 20px;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.form-control input {
+  width: 65px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-size: .9rem;
+  transition: all .5s ease-in;
+}
+
+.form-control input:focus {
+  outline: none;
+}
+
+.form-control input::placeholder {
+  color: var(--color-light);
+}
+
+.form-control label {
+  min-width: 100px;
+}
+
+.form-control .fa-solid {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+  color: red;
+  background-color: transparent;
+  font-size: 1.3rem;
+}
+
+.form-control .fa-solid:active {
+  transform: scale(.95);
+}
+
+hr {
+  width: 169px;
+  margin-top: 10px;
+  border-bottom: 1px solid var(--background-color-light);
+}
+
+#myLine {
+  display: none;
+}
+
+#total-holder {
+  margin-top: 10px;
+  display: none;
+  /*    display: flex */
+  align-items: center;
+  gap: 10px;
+}
+
+#total {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.listItems h3 {
+  display: inline-block;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+.myBtn {
+  cursor: pointer;
+  display: inline-block;
+  margin: 20px 0 0 20%;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+#totalBillsBtn,
+#resetAll {
+  display: none;
+}
+
+#resetAll {
+  margin-top: 150px;
+}
+
+#print {
+  margin: 0 0 0 60px;
+}
+
+.myBtn:hover {
+  background-color: var(--background-color-light);
+  border-color: var(--color-light);
+  color: var(--color-blue);
+}
+
+.myBtn:active {
+  transform: scale(.95);
+}
+
+.myBtn:focus {
+  outline: none;
+}
+
+#changeLanguage,
+#changeTheme {
+  position: absolute;
+  top: 20px;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid var(--color-light);
+  cursor: pointer;
+  color: var(--color-light);
+  background-color: transparent;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+#changeLanguage {
+  right: 20px;
+}
+
+#changeTheme {
+  left: 20px;
+}
+
+#changeLanguage:hover,
+#changeTheme:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+#changeLanguage a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/**************************************
+            @media Queries
+**************************************/
+
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .form-control input {
+    color: #000;
+  }
+
+  #print,
+  #resetAll,
+  #changeLanguage,
+  #changeTheme {
+    display: none !important;
+  }
+}

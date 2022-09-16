@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Materialize-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/1bbe3cd657.js" crossorigin="anonymous"></script>
+    <title>Monthly Bills</title>
+    <meta name="description" content="Record of monthly bills payments.">
+    <meta name="keywords" content="Record, monthly, bills, payments">
+    <meta name="author" content="Goran Kekez">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div id="year"></div>
+          <div id="title">
+            
+            <h1>Monthly bills for</h1><span id="month"></span>
+            <i id="monthPlus" class="fas fa-plus month"></i>
+            <i id="monthMinus" class="fas fa-minus month"></i>
+          </div>
+            <div class="col" id="initialInput">
+                <input type="text" id="userInput" placeholder="bill for" maxlength="30">
+                <button class="btn" id="enter">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="listItems">
+                <form id="myForm">
+                </form>
+                <button class="myBtn" id="totalBillsBtn">Total</button>
+                <hr id="myLine">
+                <div id="total-holder" class="total-holder">
+                  <span id="total"></span>
+                  <h3>TOTAL</h3>
+                  <button class="myBtn" id="print">Print</button>
+                </div>
+            </div>
+        </div>
+        <button class="myBtn" id="resetAll">Cancel all</button>
+    </div>
+    <div id="changeLanguage"><a href="../index.html">SR</a></div>
+    <div id="changeTheme">Dark Theme</div>
+
+    <script src="../js/main.js"></script>
+    <noscript>JavaScript not enabled!</noscript>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/1bbe3cd657.js" crossorigin="anonymous"></script>
+    <title>Mesečni Računi</title>
+    <meta name="description" content="Evidencija za plaćanje mesečnih računa.">
+    <meta name="keywords" content="Evidencija, plaćanje, mesečni, računi">
+    <meta name="author" content="Goran Kekez">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div id="year"></div>
+            <div id="title">
+
+                <h1>Mesečni računi za</h1><span id="month"></span>
+                <i id="monthPlus" class="fas fa-plus month"></i>
+                <i id="monthMinus" class="fas fa-minus month"></i>
+            </div>
+            <div class="col" id="initialInput">
+                <input type="text" id="userInput" placeholder="račun za" maxlength="30">
+                <button class="btn" id="enter">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="listItems">
+                <form id="myForm">
+                </form>
+                <button class="myBtn" id="totalBillsBtn">Ukupno</button>
+                <hr id="myLine">
+                <div id="total-holder" class="total-holder">
+                    <span id="total"></span>
+                    <h3>UKUPNO</h3>
+                    <button class="myBtn" id="print">Štampaj</button>
+                </div>
+            </div>
+        </div>
+        <button class="myBtn" id="resetAll">Poništi sve</button>
+    </div>
+    <div id="changeLanguage"><a href="en/english.html">EN</a></div>
+    <div id="changeTheme">Tamna Tema</div>
+
+    <script src="js/main.js"></script>
+    <noscript>JavaScript not enabled!</noscript>
+</body>
+
+</html>
